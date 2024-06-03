@@ -11,14 +11,14 @@
 
 		* {
    			font-family: myFirstFont;
-			font-size: 30;
+			font-size: 50;
 			color: #5f5f5f;
 		}
 	</style>
 	<body style="margin: 0;" onload="startTime()">
 		<div style="margin: 40 0 0 0;position: absolute;display: flex;">
     			<div style="left: 10%; position: fixed;">
-				<a>שקיעה :</a>
+				<a>צאת הכוכבים :</a>
 				<a id="sunset">00:00</a>
 			</div>
     			<div id="clock" style="position: fixed;right: 10%;">ידשלףחכ</div>
@@ -52,8 +52,11 @@
 				}
 				var omerDay = day.omer();
 				d.querySelector('#omer img').src = 'images/' + omerDay + '.png';
-				var sunH = day.sunset().getHours();
-				var sunM = day.sunset().getMinutes();
+				var sun = Hebcal.HDate().sunset();
+				sun.setMinutes(sun.getMinutes()+20)
+				var sunH = sun.getHours();
+				var sunM = sun.getMinutes();
+				sunM = checkTime(sunM);
 				document.getElementById('sunset').innerHTML = sunH + ":" + sunM;
 				setTimeout('refresh()', 10000);
 			}
