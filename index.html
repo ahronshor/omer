@@ -24,51 +24,8 @@
     			<div id="clock" style="position: fixed;right: 10%;">00:00:00</div>
 		</div>
 		<div id="omer" style="width: 100%; height: 100%; display: flex;">
-			<table>
-				<tr>
-					<td><img id="img0" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img1" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img2" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img3" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img4" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-				</tr>
-				<tr>
-					<td><img id="img5" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img6" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img7" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img8" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img9" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-				</tr>
-				<tr>
-					<td><img id="img10" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img11" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img12" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img13" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img14" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-				</tr>
-				<tr>
-					<td><img id="img15" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img16" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img17" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img18" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img19" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-				</tr>
-				<tr>
-					<td><img id="img20" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img21" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img22" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img23" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img24" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-				</tr>
-				<tr>
-					<td><img id="img25" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img26" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img27" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img28" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-					<td><img id="img29" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
-				</tr>
-			</table>
-
+			<img src="images/50.png" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;">
+			<img src="images/0.png" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;">
 		</div>
 		<script type="text/javascript">
 			function startTime() {
@@ -95,9 +52,9 @@
 					day = day.next();
 				}
 				var omerDay = day.omer();
-				var i2 = 20;
-				for (var i1 = 0; i1<30; i1++){
-					d.querySelector('#img'+ i1).src = 'images/' + i2 +'.png';
+				var i2 = 10;
+				for (var i1 = 0; i1<10; i1++){
+					// d.querySelector('#omer img').src = 'images/' + omerDay +'.png';
 					i2++;
 				}
 				var sun = Hebcal.HDate().sunset();
@@ -112,4 +69,5 @@
 		</script>
 	</body>
 </html>
+
 
