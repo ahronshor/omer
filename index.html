@@ -21,10 +21,26 @@
 				<a>צאת הכוכבים :</a>
 				<a id="sunset">00:00</a>
 			</div>
-    			<div id="clock" style="position: fixed;right: 10%;">ידשלףחכ</div>
+    			<div id="clock" style="position: fixed;right: 10%;">00:00:00</div>
 		</div>
 		<div id="omer" style="width: 100%; height: 100%; display: flex;">
-			<img alt="יש שגיאה במערכת" style="width: 100%; height: 100%;">
+			<table>
+				<tr>
+					<td><img id="img0" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
+					<td><img id="img1" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
+					<td><img id="img2" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
+					<td><img id="img3" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
+					<td><img id="img4" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
+				</tr>
+				<tr>
+					<td><img id="img5" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
+					<td><img id="img6" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
+					<td><img id="img7" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
+					<td><img id="img8" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
+					<td><img id="img9" alt="יש שגיאה במערכת" style="width: 100%; height: 100%;"></td>
+				</tr>
+			</table>
+
 		</div>
 		<script type="text/javascript">
 			function startTime() {
@@ -51,7 +67,11 @@
 					day = day.next();
 				}
 				var omerDay = day.omer();
-				d.querySelector('#omer img').src = 'images/' + omerDay + '.png';
+				var i2 = 10;
+				for (var i1 = 0; i1<10; i1++){
+					d.querySelector('#img'+ i1).src = 'images/' + i2 +'.png';
+					i2++;
+				}
 				var sun = Hebcal.HDate().sunset();
 				sun.setMinutes(sun.getMinutes()+20)
 				var sunH = sun.getHours();
@@ -64,3 +84,4 @@
 		</script>
 	</body>
 </html>
+
